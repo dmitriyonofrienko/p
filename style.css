@@ -1,21 +1,18 @@
-@charset "UTF-8";
 @font-face {
   font-family: "cstm";
-  /* Название шрифта */
   src: url("../fonts/cstm-regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "cstm";
-  /* Название шрифта */
   src: url("../fonts/cstm-bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
 * {
   -webkit-font-smoothing: antialiased;
-  font-family: "cstm";
+  font-family: "cstm", sans-serif;
 }
 
 a {
