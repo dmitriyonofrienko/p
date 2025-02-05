@@ -1,38 +1,5 @@
 "use strict";
 
-// const slides = document.querySelectorAll('.slide');
-// let currentSlide = 0;
-// function showSlide(index) {
-//     slides.forEach((slide, i) => {
-//         slide.classList.toggle('active', i === index);
-//     });
-// }
-// function nextSlide() {
-//     currentSlide = (currentSlide + 1) % slides.length;
-//     showSlide(currentSlide);
-// }
-// setInterval(nextSlide, 2000);
-// showSlide(currentSlide);
-////////////////////////////////////////////////////////////
-// document.addEventListener('DOMContentLoaded', function() {
-//     var video = document.getElementById('myVideo');
-//     var videoContainer = document.querySelector('.centered');
-//     function checkScroll() {
-//         var rect = videoContainer.getBoundingClientRect();
-//         if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-//             if (video.paused) {
-//                 video.play();
-//             }
-//         } else {
-//             if (!video.paused) {
-//                 video.pause();
-//             }
-//         }
-//     }
-//     window.addEventListener('scroll', checkScroll);
-//     checkScroll(); 
-// });
-// console.log("Hello, World!");
 ////////////////////////////////////////////////////////////
 document.addEventListener('DOMContentLoaded', function () {
   var videos = document.querySelectorAll('video.delayedAutoplay');
@@ -57,4 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     observer.observe(videoContainers[index]);
   });
+}); //автоповтор слайдера логотипов на главнйо странице
+
+document.addEventListener("DOMContentLoaded", function () {
+  var logoFlow = document.querySelector(".logo_flow_inner");
+  logoFlow.innerHTML += logoFlow.innerHTML;
 });

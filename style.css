@@ -1,22 +1,29 @@
-:root {
-  font-family: Inter, sans-serif;
-  font-feature-settings: "liga" 1, "calt" 1;
-  /* fix for Chrome */
+@charset "UTF-8";
+@font-face {
+  font-family: "cstm";
+  /* Название шрифта */
+  src: url("/fonts/cstm-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
-
-@supports (font-variation-settings: normal) {
-  :root {
-    font-family: InterVariable, sans-serif;
-  }
+@font-face {
+  font-family: "cstm";
+  /* Название шрифта */
+  src: url("/fonts/cstm-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
 }
 * {
   -webkit-font-smoothing: antialiased;
+  font-family: "cstm";
 }
 
 a {
   color: #001E0A;
   text-decoration: none;
   font-weight: 430;
+  font-size: 20px;
+  line-height: 26px;
 }
 a:visited {
   color: #001E0A;
@@ -27,6 +34,12 @@ a:hover {
   transition: 0.2s;
 }
 
+@media (max-width: 800px) {
+  a {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
 img, a {
   -webkit-user-drag: none;
   user-select: none;
@@ -46,6 +59,13 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
+}
+.logo p {
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase !important;
+  font-weight: 700;
 }
 
 .logo img {
@@ -78,13 +98,19 @@ body {
 }
 
 p {
-  font-size: 17px;
-  line-height: 25px;
+  font-size: 20px;
+  line-height: 26px;
   font-weight: 430;
   margin: 0;
   font-optical-sizing: 10;
 }
 
+@media (max-width: 800px) {
+  p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
 .year {
   margin-right: 20px;
 }
@@ -98,10 +124,16 @@ p {
 }
 
 .container {
-  margin: 30px;
-  width: calc(100% - 60px);
+  margin: 15px;
+  width: calc(100% - 30px);
 }
 
+@media (max-width: 800px) {
+  .container {
+    margin: 15px;
+    width: calc(100% - 30px);
+  }
+}
 .back {
   background-color: #B2FF10;
   display: flex;
@@ -114,15 +146,26 @@ p {
 
 h1 {
   margin: 0;
-  font-size: 50px;
+  font-size: 55px;
   font-weight: 650;
   line-height: 55px;
 }
 
+@media (max-width: 800px) {
+  h1 {
+    font-size: 35px;
+    line-height: 35px;
+  }
+}
 .case_head {
-  margin: 100px 30px;
+  margin: 40px 15px 100px;
 }
 
+@media (max-width: 800px) {
+  .case_head {
+    margin: 20px 15px 40px;
+  }
+}
 .head {
   margin-bottom: 20px;
 }
@@ -140,19 +183,27 @@ h1 {
 .grid {
   display: flex;
   flex-direction: column;
+  padding-top: 40px;
 }
 
 .grid_row {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  gap: 1.5vw;
+  gap: 0.8vw;
   margin-bottom: 40px;
 }
 
+@media (max-width: 800px) {
+  .grid_row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
 .image_wrap {
   background-color: #171202;
-  margin-bottom: 0.75vw;
+  margin-bottom: 10px;
   overflow: hidden;
+  border-radius: 6px;
 }
 .image_wrap img, .image_wrap video {
   max-width: 100%;
@@ -162,6 +213,12 @@ h1 {
   transition: transform 0.4s ease;
 }
 
+@media (max-width: 800px) {
+  .image_wrap img {
+    height: 100%;
+    object-fit: contain;
+  }
+}
 a:hover .image_wrap img,
 a:hover .image_wrap video {
   transition: transform 0.4s ease;
@@ -192,33 +249,49 @@ a:hover .image_wrap video {
   grid-column: span 10;
 }
 
+@media (max-width: 800px) {
+  .col-2, .col-3, .col-4, .col-5, .col-10 {
+    grid-column: span 1;
+  }
+}
 .grad_line {
   max-width: 1920px;
-  margin: 0 30px;
-  --background: #FFFFFF;
-  --color: rgba(0, 0, 0, 0.5);
-  --height: 1px;
-  --width: 4px;
-  --fade-stop: 90%;
-  --offset: -100px;
+  margin: 0 15px;
   position: absolute;
-  width: calc(100% - 60px);
-  height: var(--height);
-  background: linear-gradient(to right, var(--color), var(--color) 50%, transparent 0, transparent);
-  background-size: var(--width) var(--height);
+  width: calc(100% - 30px);
+  height: 1px;
+  background: #e1e1e1;
 }
 
+@media (max-width: 800px) {
+  .grad_line {
+    margin: 0 15px;
+    width: calc(100% - 30px);
+  }
+}
 .hero {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5vw;
-  margin-bottom: 60px;
-  margin-top: 120px;
+  grid-template-columns: 6fr 4fr;
+  gap: 0.8vw;
+  padding-top: 80px;
 }
 
 @media (max-width: 800px) {
   .hero {
     grid-template-columns: 1fr;
+    padding-top: 40px;
+    margin-bottom: 30px;
+  }
+}
+.container.hero {
+  height: calc(100vh - 380px);
+}
+
+@media (max-width: 800px) {
+  .container.hero {
+    height: auto;
+    padding-top: 40px;
+    margin-bottom: 30px;
   }
 }
 .hero_description, .paragraph {
@@ -250,10 +323,19 @@ a:hover .image_wrap video {
 
 .header {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5vw;
+  grid-template-columns: 6fr 4fr;
+  gap: 0.8vw;
+  margin-bottom: 55px;
 }
 
+@media (max-width: 800px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+}
 .next_work {
   display: flex;
   align-items: center;
@@ -277,6 +359,12 @@ a:hover .image_wrap video {
   margin-left: 15px;
 }
 
+@media (max-width: 800px) {
+  .next_work_link img {
+    width: 30px;
+    height: 30px;
+  }
+}
 .mt80 {
   margin-top: 80px;
 }
@@ -293,8 +381,65 @@ a:hover .image_wrap video {
   gap: 40px 20px;
 }
 
+@media (max-width: 800px) {
+  .data {
+    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 40px 20px;
+  }
+}
 .data_number p {
   font-size: 45px;
   line-height: 45px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+  .data_number p {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+.logo_flow {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 800px) {
+  .logo_flow {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.flow_img img {
+  max-height: 85px;
+}
+
+@media (max-width: 800px) {
+  .flow_img img {
+    max-height: 60px;
+  }
+}
+.logo_flow {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.logo_flow_inner {
+  display: flex;
+  gap: 30px;
+  animation: logo-flow 18s linear infinite;
+}
+
+@keyframes logo-flow {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-47.55%);
+  }
 }
