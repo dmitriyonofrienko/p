@@ -14,6 +14,10 @@
   background-color: #071C3A;
 }
 
+.fancypink {
+  background-color: #C2BDFE;
+}
+
 .case_double_image {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
