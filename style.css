@@ -439,9 +439,10 @@ a:hover .image_wrap video {
 }
 
 .logo_flow_inner {
+  z-index: 10;
   display: flex;
   gap: 30px;
-  animation: logo-flow 18s linear infinite;
+  animation: logo-flow 16s linear infinite;
 }
 
 @keyframes logo-flow {
@@ -449,6 +450,46 @@ a:hover .image_wrap video {
     transform: translateX(0%);
   }
   to {
-    transform: translateX(-47.55%);
+    transform: translateX(-48%);
   }
+}
+.footer {
+  padding-top: 40px;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer a {
+  color: rgba(0, 30, 10, 0.5);
+}
+.footer a:hover {
+  color: #EA3526;
+}
+.footer p {
+  color: rgba(0, 30, 10, 0.5);
+}
+
+@media (max-width: 800px) {
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 25px;
+  }
+}
+.left-rec, .right-rec {
+  position: absolute;
+  height: 100%;
+  width: 40px;
+  min-width: 40px;
+  z-index: 100;
+}
+
+.right-rec {
+  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  right: 0px;
+}
+
+.left-rec {
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+  left: 0px;
 }
