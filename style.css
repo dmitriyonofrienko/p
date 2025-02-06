@@ -1,12 +1,12 @@
 @font-face {
   font-family: "cstm";
-  src: url("../fonts/cstm-regular.woff2") format("woff2");
+  src: url("../fonts/cstm-regular.woff2") format("woff2"), url("../fonts/cstm-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "cstm";
-  src: url("../fonts/cstm-bold.woff2") format("woff2");
+  src: url("../fonts/cstm-bold.woff2") format("woff2"), url("../fonts/cstm-bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
