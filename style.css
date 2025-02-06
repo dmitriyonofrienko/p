@@ -150,8 +150,8 @@ h1 {
 
 @media (max-width: 800px) {
   h1 {
-    font-size: 35px;
-    line-height: 35px;
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 .case_head {
