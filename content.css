@@ -21,8 +21,8 @@
 .case_double_image {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0.8vw 15px 0 15px;
-  gap: 0.8vw;
+  margin: 15px 15px 0 15px;
+  gap: 15px;
 }
 .case_double_image img, .case_double_image video {
   border-radius: 6px;
@@ -32,10 +32,10 @@
   margin: 0 auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .case_double_image {
     grid-template-columns: 1fr;
-    margin: 0.8vw 15px 0 15px;
+    margin: 15px 15px 0 15px;
     gap: 15px;
   }
 }
@@ -48,9 +48,9 @@
   border-radius: 6px;
 }
 .case img, .case video {
-  border-radius: 6px;
   width: 100%;
   height: auto;
+  border-radius: 6px;
 }
 
 @media (max-width: 800px) {
@@ -62,7 +62,6 @@
   padding: 8vw;
 }
 .centered img, .centered video {
-  border-radius: 6px;
   max-width: 1000px;
 }
 
@@ -74,6 +73,10 @@
 }
 .nbp {
   padding-bottom: 0px;
+}
+
+.nbp img, video {
+  border-radius: 6px 6px 0 0;
 }
 
 .case_text {
