@@ -15,12 +15,22 @@
   font-family: "cstm", sans-serif;
 }
 
+.arrow-svg {
+  margin-left: 10px;
+  overflow: visible;
+}
+
+.arrow-svg path {
+  transition: 0.2s;
+}
+
 a {
   color: #001E0A;
   text-decoration: none;
   font-weight: 430;
   font-size: 20px;
   line-height: 26px;
+  transition: 0.2s;
 }
 a:visited {
   color: #001E0A;
@@ -29,6 +39,11 @@ a:hover {
   cursor: pointer;
   color: #EA3526;
   transition: 0.2s;
+}
+a:hover .arrow-svg path {
+  fill: #EA3526;
+  transform: translateX(10px);
+  transition: transform 0.3s ease, fill 0.3s ease;
 }
 
 @media (max-width: 800px) {
@@ -53,24 +68,43 @@ body {
 }
 
 .logo {
-  width: 100%;
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 .logo p {
   font-size: 17px;
   line-height: 20px;
   letter-spacing: 0.02em;
-  text-transform: uppercase !important;
+  text-transform: uppercase;
   font-weight: 700;
 }
 
 .logo img {
   width: 50px;
   height: 50px;
-  margin-right: 10px;
 }
 
+@media (max-width: 800px) {
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+}
+.scrolled {
+  backdrop-filter: blur(15px);
+  background: rgba(246, 246, 246, 0.9);
+  left: 30%;
+  width: calc(100% - 62%);
+  transition: ease 0.5s;
+}
+
+@media (max-width: 800px) {
+  .scrolled {
+    left: 9%;
+    width: calc(100% - 20%);
+  }
+}
 .row {
   display: grid;
   grid-template-columns: 100px 3fr 180px 4fr;
@@ -94,16 +128,14 @@ body {
   color: rgba(0, 30, 10, 0.5);
 }
 
-p {
+p, li {
   font-size: 20px;
   line-height: 26px;
-  font-weight: 430;
   margin: 0;
-  font-optical-sizing: 10;
 }
 
 @media (max-width: 800px) {
-  p {
+  p, li {
     font-size: 16px;
     line-height: 22px;
   }
@@ -131,16 +163,6 @@ p {
     width: calc(100% - 30px);
   }
 }
-.back {
-  background-color: #B2FF10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 20px;
-  width: 40px;
-  border-radius: 40px;
-}
-
 h1 {
   margin: 0;
   font-size: 55px;
@@ -213,7 +235,6 @@ h1 {
 
 @media (max-width: 800px) {
   .image_wrap img {
-    height: 100%;
     object-fit: contain;
   }
 }
@@ -306,7 +327,7 @@ a:hover .image_wrap video {
 .hero_description, .paragraph {
   max-width: 700px;
 }
-.hero_description p, .paragraph p {
+.hero_description p, .hero_description li, .paragraph p, .paragraph li {
   margin-bottom: 10px;
   margin-top: 10px;
 }
@@ -330,15 +351,13 @@ a:hover .image_wrap video {
   gap: 10px;
 }
 
-.header {
+.header_nav {
   display: grid;
   grid-template-columns: 6fr 4fr;
-  gap: 0.8vw;
-  margin-bottom: 55px;
 }
 
 @media (max-width: 800px) {
-  .header {
+  .header_nav {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -357,7 +376,7 @@ a:hover .image_wrap video {
   color: #EA3526;
 }
 .next_work a:hover {
-  filter: invert(21%) sepia(73%) saturate(4261%) hue-rotate(354deg) brightness(103%) contrast(84%);
+  color: #EA3526;
 }
 
 .next_work_link {
@@ -434,15 +453,6 @@ a:hover .image_wrap video {
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  width: 100%;
-  display: flex;
-}
-
-.logo_flow_inner {
-  z-index: 10;
-  display: flex;
-  gap: 30px;
-  animation: logo-flow 16s linear infinite;
 }
 
 @keyframes logo-flow {
@@ -450,9 +460,16 @@ a:hover .image_wrap video {
     transform: translateX(0%);
   }
   to {
-    transform: translateX(-48%);
+    transform: translateX(-45%);
   }
 }
+.logo_flow_inner {
+  z-index: 10;
+  display: flex;
+  gap: 30px;
+  animation: logo-flow 14s linear infinite;
+}
+
 .footer {
   padding-top: 40px;
   padding-bottom: 25px;
@@ -492,4 +509,32 @@ a:hover .image_wrap video {
 .left-rec {
   background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
   left: 0px;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease-in-out, visibility 0s linear 0.15s;
+}
+
+body.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.15s ease-in-out;
+}
+
+body.hide {
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out, visibility 0s linear 0.15s;
 }
