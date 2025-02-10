@@ -1,44 +1,6 @@
 "use strict";
 
-//запускает видео на странице только после того как пользователь видет его на 25%
-document.addEventListener("DOMContentLoaded", function () {
-  var videos = document.querySelectorAll("video");
-  var playedVideos = new Set();
-
-  if ("IntersectionObserver" in window) {
-    var _observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting && !playedVideos.has(entry.target)) {
-          entry.target.pause(); // Останавливаем видео, если оно запускается
-
-          entry.target.muted = true; // Обязательно для автозапуска
-
-          entry.target.play();
-          playedVideos.add(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.25
-    });
-
-    videos.forEach(function (video) {
-      video.pause(); // Останавливаем видео при загрузке страницы
-
-      _observer.observe(video);
-    });
-  }
-}); //заглуает видео
-
-document.addEventListener("DOMContentLoaded", function () {
-  var videos = document.querySelectorAll("video");
-  videos.forEach(function (video) {
-    video.muted = true; // Программно отключаем звук
-
-    video.play()["catch"](function (error) {
-      return console.log("Autoplay blocked:", error);
-    });
-  });
-}); //добавляет класс по скроллу
+//добавляет класс по скроллу
 //анимирует логотип в хедере
 // window.addEventListener("scroll", function () {
 //     const header = document.querySelector(".logo");
@@ -49,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //     }
 //   });
 //fade up анимация для блоков с класом .fade-up
-
 var observer = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {
     if (entry.isIntersecting) {
