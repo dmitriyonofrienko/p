@@ -479,20 +479,3 @@ a:hover .image_wrap video {
   opacity: 1;
   transform: translateY(0);
 }
-
-body {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.15s ease-in-out, visibility 0s linear 0.15s;
-}
-
-body.show {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.15s ease-in-out;
-}
-
-body.hide {
-  opacity: 0;
-  transition: opacity 0.15s ease-in-out, visibility 0s linear 0.15s;
-}

@@ -1,3 +1,4 @@
+
 //добавляет класс по скроллу
 //анимирует логотип в хедере
 // window.addEventListener("scroll", function () {
@@ -25,27 +26,26 @@ const observer = new IntersectionObserver(entries => {
 
 
 
-  //плавный переход между страницами
-document.addEventListener("DOMContentLoaded", () => {
-  const page = document.querySelector("body");
+//   //плавный переход между страницами
+// document.addEventListener("DOMContentLoaded", () => {
+//   const page = document.querySelector("body");
 
-// Делаем плавное появление после рендеринга
-requestAnimationFrame(() => {
-  page.classList.add("show");
-});
+// // Делаем плавное появление после рендеринга
+// requestAnimationFrame(() => {
+//   page.classList.add("show");
+// });
 
-// Плавное исчезновение при переходе
-document.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      const href = link.getAttribute("href");
+// // Плавное исчезновение при переходе
+// document.querySelectorAll("a").forEach(link => {
+//     link.addEventListener("click", (event) => {
+//       event.preventDefault();
+//       const href = link.getAttribute("href");
 
-      // Скрываем страницу перед переходом
-      page.classList.add("hide");
+//       // Скрываем страницу перед переходом
+//       page.classList.add("hide");
 
-      setTimeout(() => {
-        window.location.href = href;
-      }, 150); // Время совпадает с transition в CSS
-    });
-  });
-});
+//       setTimeout(() => {
+//         window.location.href = href;
+//       }, 150); // Время совпадает с transition в CSS
+//     });
+//   });

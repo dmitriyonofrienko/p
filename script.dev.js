@@ -25,24 +25,22 @@ var observer = new IntersectionObserver(function (entries) {
 });
 document.querySelectorAll(".fade-up").forEach(function (el) {
   return observer.observe(el);
-}); //плавный переход между страницами
-
-document.addEventListener("DOMContentLoaded", function () {
-  var page = document.querySelector("body"); // Делаем плавное появление после рендеринга
-
-  requestAnimationFrame(function () {
-    page.classList.add("show");
-  }); // Плавное исчезновение при переходе
-
-  document.querySelectorAll("a").forEach(function (link) {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      var href = link.getAttribute("href"); // Скрываем страницу перед переходом
-
-      page.classList.add("hide");
-      setTimeout(function () {
-        window.location.href = href;
-      }, 150); // Время совпадает с transition в CSS
-    });
-  });
-});
+}); //   //плавный переход между страницами
+// document.addEventListener("DOMContentLoaded", () => {
+//   const page = document.querySelector("body");
+// // Делаем плавное появление после рендеринга
+// requestAnimationFrame(() => {
+//   page.classList.add("show");
+// });
+// // Плавное исчезновение при переходе
+// document.querySelectorAll("a").forEach(link => {
+//     link.addEventListener("click", (event) => {
+//       event.preventDefault();
+//       const href = link.getAttribute("href");
+//       // Скрываем страницу перед переходом
+//       page.classList.add("hide");
+//       setTimeout(() => {
+//         window.location.href = href;
+//       }, 150); // Время совпадает с transition в CSS
+//     });
+//   });
