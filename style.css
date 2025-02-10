@@ -334,9 +334,10 @@ a:hover .image_wrap video {
 
 .hero_info {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   height: 100%;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .hero_links a {
@@ -478,4 +479,25 @@ a:hover .image_wrap video {
 .fade-up.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.lang_block {
+  display: flex;
+  flex-direction: column;
+}
+.lang_block a {
+  font-size: 13px !important;
+  line-height: 25px;
+  font-weight: bold;
+  letter-spacing: 5%;
+}
+
+.lang_link {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+}
+
+.link_active {
+  color: #EA3526 !important;
 }

@@ -1,0 +1,48 @@
+include __head
+    title Power Project Management
+
+    body
+        include __case_back
+
+        .case_head.hero
+            .hero_head
+                .head
+                    h1 Power Project Management
+                .tag
+                    p Installation of solar panels in the USA
+            .paragraph
+                p PPM is a company that installs solar panels in residential buildings in the United States.
+                p To demonstrate to potential customers the benefits of installing solar panels, we have developed a cost calculator. With its help, everyone can calculate the installation costs and the amount of money saved.
+                p The calculator needs to know two main parameters: the address and the amount of the monthly electricity bill. Using the address of the house, the calculator receives information about the average annual level of solar energy reaching the roof via a third-party API. Additional parameters allow you to refine this calculation.
+                p The final price also depends on the payment method: purchase or purchase on credit. It is important to show that when you buy a solar system on credit, the monthly payment will be less than the current cost of electricity. This means an instant payback.
+                p The page also displays other important information, such as federal rebates, the warranty period, and a schedule of savings throughout the warranty period.
+        
+        .case.centered.lightblue
+            img(src="../assets/case_ppm/1.jpg", alt="")
+
+        .case.centered.lightblue
+            img(src="../assets/case_ppm/2.jpg", alt="")
+
+        .case.tablet.lightblue
+            video(src="../assets/case_ppm/2.mp4" autoplay loop="true" muted playsinline)
+
+        .case.tablet.lightblue
+            video(src="../assets/case_ppm/1.mp4" autoplay loop="true" muted playsinline)
+        
+        .case.lightblue
+            img(src="../assets/case_ppm/3.jpg", alt="")
+
+
+
+        //-page end
+        .grad_line.mt80
+
+        .container.pt40
+            .next_work
+                p Next project
+                a(href="case_aquaboon.html").next_work_link
+                    h1 Aquaboon
+                    svg.arrow-svg(width='55' height='55' viewbox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(fill-rule='evenodd' clip-rule='evenodd' d='M22.4551 4L42 24.5L22.4551 45L18.4253 40.9633L31.3684 27.3878H2V21.6122H31.3684L18.4253 8.0367L22.4551 4Z' fill='black')
+
+    script(src="../script.dev.js")

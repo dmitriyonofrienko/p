@@ -1,0 +1,42 @@
+include __head
+    title Medlas
+
+    body
+        include __case_back
+        
+        .case_head.hero
+            .hero_head
+                .head
+                    h1 Medlas Medical Center
+                .tag
+                    p Modern medical center in Kyiv
+            .paragraph
+                p The clinic still has an old website, the structure of which does not correspond to the current list of services. The site lacks information about doctors and promotions. The main goal of creating a new resource is to expand the list of services and update the design to make it look more modern. An additional goal is to improve the website's advertising KPIs.
+        
+
+        .case.centered.lightgray
+            video(src="../assets/case_medlas/1.mp4" autoplay loop="true" muted playsinline)
+        
+        .case.centered.lightgray.tablet
+            video(src="../assets/case_medlas/2.mp4" autoplay loop="true" muted playsinline)
+        
+        .case
+            img(src="../assets/case_medlas/1.jpg", alt="")
+
+        .case_double_image
+            video(src="../assets/case_medlas/3.mp4" autoplay loop="true" muted playsinline)
+            video(src="../assets/case_medlas/5.mp4" autoplay loop="true" muted playsinline)
+
+        
+        //-page end
+        .grad_line.mt80
+
+        .container.pt40
+            .next_work
+                p Наступний проєкт
+                a(href="case_c4b.html").next_work_link
+                    h1 Cars4Bid
+                    svg.arrow-svg(width='55' height='55' viewbox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(fill-rule='evenodd' clip-rule='evenodd' d='M22.4551 4L42 24.5L22.4551 45L18.4253 40.9633L31.3684 27.3878H2V21.6122H31.3684L18.4253 8.0367L22.4551 4Z' fill='black')
+
+    script(src="../script.dev.js")
