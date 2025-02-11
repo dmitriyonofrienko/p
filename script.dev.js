@@ -11,7 +11,7 @@ var observer = new IntersectionObserver(function (entries) {
     }
   });
 }, {
-  threshold: 0.3
+  threshold: 0.15
 });
 document.querySelectorAll(".fade-up").forEach(function (el) {
   return observer.observe(el);
