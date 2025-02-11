@@ -170,6 +170,12 @@ h1 {
   line-height: 55px;
 }
 
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
 @media (max-width: 800px) {
   h1 {
     font-size: 30px;
@@ -294,8 +300,8 @@ a:hover .image_wrap video {
 }
 .hero {
   display: grid;
-  grid-template-columns: 6fr 4fr;
-  gap: 0.8vw;
+  grid-template-columns: 7fr 5fr;
+  gap: 15px;
   padding-top: 80px;
 }
 
@@ -332,6 +338,11 @@ a:hover .image_wrap video {
   margin-top: 10px;
 }
 
+.hero_description {
+  margin-top: -10px;
+  padding-right: 3vw;
+}
+
 .hero_info {
   display: flex;
   flex-direction: row;
@@ -354,7 +365,8 @@ a:hover .image_wrap video {
 
 .header_nav {
   display: grid;
-  grid-template-columns: 6fr 4fr;
+  grid-template-columns: 7fr 5fr;
+  gap: 15px;
 }
 
 @media (max-width: 800px) {
@@ -492,6 +504,13 @@ a:hover .image_wrap video {
   letter-spacing: 5%;
 }
 
+@media (max-width: 800px) {
+  .lang_block {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+}
 .lang_link {
   width: 25px;
   height: 25px;
