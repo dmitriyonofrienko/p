@@ -20,6 +20,12 @@
   overflow: visible;
 }
 
+@media (max-width: 800px) {
+  .arrow-svg {
+    width: 30px;
+    height: 30px;
+  }
+}
 .arrow-svg path {
   transition: 0.2s;
 }
