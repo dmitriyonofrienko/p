@@ -469,27 +469,6 @@ a:hover .image_wrap video {
     padding-bottom: 20px;
   }
 }
-.logo_flow::before, .logo_flow::after {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 40px;
-  z-index: 100;
-  content: "";
-}
-
-.logo_flow::before {
-  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-  right: 0px;
-  z-index: 100;
-}
-
-.logo_flow::after {
-  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
-  left: 0px;
-  z-index: 100;
-}
-
 .logo_flow_inner {
   display: flex;
   animation: 30s logo-slide linear infinite;
