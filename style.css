@@ -447,10 +447,18 @@ a:hover .image_wrap video {
     line-height: 30px;
   }
 }
+@keyframes logo-slide {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 .logo_flow {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  display: flex;
   overflow: hidden;
+  padding: 40px 0;
   white-space: nowrap;
   position: relative;
 }
@@ -461,23 +469,36 @@ a:hover .image_wrap video {
     padding-bottom: 20px;
   }
 }
-@keyframes logo-flow {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+.logo_flow::before, .logo_flow::after {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  z-index: 100;
+  content: "";
 }
+
+.logo_flow::before {
+  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  right: 0px;
+  z-index: 100;
+}
+
+.logo_flow::after {
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+  left: 0px;
+  z-index: 100;
+}
+
 .logo_flow_inner {
-  display: inline-flex;
-  gap: 30px;
-  z-index: 10;
-  animation: 30s logo-flow linear infinite;
+  display: flex;
+  animation: 30s logo-slide linear infinite;
+  will-change: transform;
 }
 
 .flow_img img {
   max-height: 85px;
+  margin: 0 30px;
 }
 
 @media (max-width: 800px) {
@@ -508,35 +529,6 @@ a:hover .image_wrap video {
     padding-bottom: 25px;
   }
 }
-.left-rec, .right-rec {
-  position: absolute;
-  height: 100%;
-  width: 40px;
-  z-index: 100;
-  content: "";
-}
-
-.logo_flow::before, .logo_flow::after {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 40px;
-  z-index: 100;
-  content: "";
-}
-
-.logo_flow::before {
-  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-  right: 0px;
-  z-index: 100;
-}
-
-.logo_flow::after {
-  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
-  left: 0px;
-  z-index: 100;
-}
-
 .fade-up {
   opacity: 0;
   transform: translateY(20px);
