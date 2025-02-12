@@ -15,4 +15,9 @@ var observer = new IntersectionObserver(function (entries) {
 });
 document.querySelectorAll(".fade-up").forEach(function (el) {
   return observer.observe(el);
-});
+}); // // use a script tag or an external JS file
+// document.addEventListener("DOMContentLoaded", (event) => {
+//   gsap.registerPlugin(TextPlugin)
+//   // gsap code here!
+//  });
+// gsap.to("#myText", {duration: 1, text: "ДОПОМАГАЮ КЛІЄНТАМ РЕАЛІЗОВУВАТИ ЇХ БІЗНЕС ЦІЛІ ЧЕРЕЗ ДИЗАЙН.", delay: .1});
