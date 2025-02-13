@@ -477,7 +477,7 @@ a:hover .image_wrap video {
 
 .flow_img img {
   max-height: 85px;
-  margin: 0 30px;
+  margin: 0 20px;
   transition: 0.65s;
 }
 .flow_img img:hover {
