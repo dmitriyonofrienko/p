@@ -18,6 +18,18 @@
   background-color: #C2BDFE;
 }
 
+.deepblack {
+  background-color: #000000;
+}
+
+.dullgray {
+  background-color: #D7D7D7;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
 .case_double_image {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -68,7 +80,7 @@
 @media (max-width: 800px) {
   .centered {
     padding: 0px;
-    border: 1px solid #eee;
+    border: 1px solid #D1D5E1;
   }
 }
 .nbp {
@@ -80,13 +92,18 @@
 }
 
 .case_text {
-  margin: 60px 30px 40px 30px;
-  max-width: 520px;
+  margin: 100px auto 100px auto;
+  max-width: 800px;
 }
 .case_text p {
   margin-bottom: 10px;
 }
 
+@media (max-width: 800px) {
+  .case_text {
+    margin: 60px 15px 60px 15px;
+  }
+}
 .mobile {
   max-width: 1920px;
 }
@@ -104,7 +121,7 @@
   padding: 5vw 10vw;
 }
 .tablet img, .tablet video {
-  background-color: #001E0A;
+  background-color: #000000;
   padding: 20px;
   border-radius: 30px;
   max-width: 1000px;

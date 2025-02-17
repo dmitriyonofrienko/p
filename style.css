@@ -31,7 +31,7 @@
 }
 
 a {
-  color: #001E0A;
+  color: #000000;
   text-decoration: none;
   font-weight: 430;
   font-size: 20px;
@@ -39,7 +39,7 @@ a {
   transition: 0.2s;
 }
 a:visited {
-  color: #001E0A;
+  color: #000000;
 }
 a:hover {
   cursor: pointer;
@@ -67,7 +67,7 @@ img, a {
 }
 
 body {
-  background-color: #fff;
+  background-color: #ffffff;
   margin: 0 auto;
   padding: 0;
   max-width: 1920px;
@@ -116,8 +116,8 @@ body {
   grid-template-columns: 100px 3fr 180px 4fr;
   width: 100%;
   padding: 20px 0px;
-  border-top: 1px solid #001E0A;
-  border-bottom: 1px solid #001E0A;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
 }
 .row p {
   font-weight: bold;
@@ -128,10 +128,10 @@ body {
   grid-template-columns: 100px 3fr 180px 4fr;
   width: 100%;
   padding: 20px 0px;
-  border-bottom: 1px solid #001E0A;
+  border-bottom: 1px solid #000000;
 }
 .row__link:hover {
-  color: rgba(0, 30, 10, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 p, li {
@@ -203,7 +203,7 @@ h1 {
 
 .tag {
   max-width: 520px;
-  color: rgba(0, 30, 10, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -231,7 +231,6 @@ h1 {
   }
 }
 .image_wrap {
-  background-color: #171202;
   margin-bottom: 10px;
   overflow: hidden;
   border-radius: 6px;
@@ -257,7 +256,7 @@ a:hover .image_wrap video {
 }
 
 .case_description {
-  color: rgba(0, 30, 10, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .col-2 {
@@ -295,7 +294,7 @@ a:hover .image_wrap video {
   position: absolute;
   width: calc(100% - 30px);
   height: 1px;
-  background: #e1e1e1;
+  background: #D1D5E1;
 }
 
 @media (max-width: 800px) {
@@ -497,13 +496,13 @@ a:hover .image_wrap video {
   justify-content: space-between;
 }
 .footer a {
-  color: rgba(0, 30, 10, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 .footer a:hover {
   color: #EA3526;
 }
 .footer p {
-  color: rgba(0, 30, 10, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 800px) {

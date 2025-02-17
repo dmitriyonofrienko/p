@@ -11,13 +11,29 @@ const observer = new IntersectionObserver(entries => {
   }, { threshold: 0.15 });
   document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
 
+  $(function () {
+    $('.tlt').textillate();
+  })
 
 
-// // use a script tag or an external JS file
-// document.addEventListener("DOMContentLoaded", (event) => {
-//   gsap.registerPlugin(TextPlugin)
-//   // gsap code here!
-//  });
-
-
-// gsap.to("#myText", {duration: 1, text: "ДОПОМАГАЮ КЛІЄНТАМ РЕАЛІЗОВУВАТИ ЇХ БІЗНЕС ЦІЛІ ЧЕРЕЗ ДИЗАЙН.", delay: .1});
+  //smooth scroll
+  let scrollY = window.scrollY;
+  let speed = 0.07; // Регулируй инерцию (0.05 - сильнее, 0.2 - слабее)
+  let isScrolling;
+  
+  function smoothScroll() {
+    scrollY += (window.scrollY - scrollY) * speed;
+    window.scrollTo(0, scrollY);
+    
+    if (Math.abs(window.scrollY - scrollY) > 0.5) {
+      isScrolling = requestAnimationFrame(smoothScroll);
+    } else {
+      cancelAnimationFrame(isScrolling);
+    }
+  }
+  
+  window.addEventListener("scroll", () => {
+    if (!isScrolling) {
+      smoothScroll();
+    }
+  });
