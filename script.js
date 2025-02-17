@@ -14,26 +14,3 @@ const observer = new IntersectionObserver(entries => {
   $(function () {
     $('.tlt').textillate();
   })
-
-
-  //smooth scroll
-  let scrollY = window.scrollY;
-  let speed = 0.07; // Регулируй инерцию (0.05 - сильнее, 0.2 - слабее)
-  let isScrolling;
-  
-  function smoothScroll() {
-    scrollY += (window.scrollY - scrollY) * speed;
-    window.scrollTo(0, scrollY);
-    
-    if (Math.abs(window.scrollY - scrollY) > 0.5) {
-      isScrolling = requestAnimationFrame(smoothScroll);
-    } else {
-      cancelAnimationFrame(isScrolling);
-    }
-  }
-  
-  window.addEventListener("scroll", () => {
-    if (!isScrolling) {
-      smoothScroll();
-    }
-  });

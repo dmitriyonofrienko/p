@@ -318,7 +318,7 @@ a:hover .image_wrap video {
   }
 }
 .container.hero {
-  height: calc(100vh - 380px);
+  height: calc(100vh - 340px);
 }
 
 @media (max-width: 800px) {

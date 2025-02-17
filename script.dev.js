@@ -18,26 +18,4 @@ document.querySelectorAll(".fade-up").forEach(function (el) {
 });
 $(function () {
   $('.tlt').textillate();
-}); //smooth scroll
-
-var scrollY = window.scrollY;
-var speed = 0.07; // Регулируй инерцию (0.05 - сильнее, 0.2 - слабее)
-
-var isScrolling;
-
-function smoothScroll() {
-  scrollY += (window.scrollY - scrollY) * speed;
-  window.scrollTo(0, scrollY);
-
-  if (Math.abs(window.scrollY - scrollY) > 0.5) {
-    isScrolling = requestAnimationFrame(smoothScroll);
-  } else {
-    cancelAnimationFrame(isScrolling);
-  }
-}
-
-window.addEventListener("scroll", function () {
-  if (!isScrolling) {
-    smoothScroll();
-  }
 });
