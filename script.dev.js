@@ -16,6 +16,3 @@ var observer = new IntersectionObserver(function (entries) {
 document.querySelectorAll(".fade-up").forEach(function (el) {
   return observer.observe(el);
 });
-$(function () {
-  $('.tlt').textillate();
-});
