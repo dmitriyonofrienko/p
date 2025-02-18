@@ -77,7 +77,7 @@
 .double {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   height: auto;
   border-radius: 6px;
 }
@@ -93,7 +93,7 @@
   }
 }
 .centered {
-  padding: 8vw;
+  padding: 6vw;
 }
 .centered img, .centered video {
   max-width: 1000px;
