@@ -387,7 +387,7 @@ a:hover .image_wrap video {
   transition: 0.3s ease;
 }
 .did_list p:hover {
-  background-color: #ffffff;
+  background-color: rgba(244, 245, 242, 0.5);
 }
 
 @media (max-width: 800px) {
