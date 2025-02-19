@@ -152,7 +152,18 @@ p, li {
   }
 }
 .year {
-  margin-right: 20px;
+  margin-top: 18px;
+  margin-right: 5px;
+  padding: 0px 15px;
+  background-color: #f1f1f1;
+  border-radius: 40px;
+  display: inline-block;
+}
+.year p {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
 }
 
 .industry {
@@ -206,8 +217,13 @@ h1 {
   margin-bottom: 20px;
 }
 
+@media (max-width: 800px) {
+  .head {
+    margin-bottom: 10px;
+  }
+}
 .tag {
-  max-width: 520px;
+  max-width: 620px;
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -226,17 +242,18 @@ h1 {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   gap: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 @media (max-width: 800px) {
   .grid_row {
     grid-template-columns: 1fr;
     gap: 30px;
+    margin-bottom: 30px;
   }
 }
 .image_wrap {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   overflow: hidden;
   border-radius: 6px;
 }
@@ -262,6 +279,18 @@ a:hover .image_wrap video {
 
 .case_description {
   color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.case_description p {
+  font-size: 17px;
+  line-height: 23px;
+}
+
+.case_name {
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .col-2 {
@@ -320,6 +349,7 @@ a:hover .image_wrap video {
     grid-template-columns: 1fr;
     padding-top: 40px;
     margin-bottom: 30px;
+    gap: 5px;
   }
 }
 .container.hero {
