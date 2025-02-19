@@ -34,6 +34,10 @@
   background-color: #fafafa;
 }
 
+.skyblue {
+  background-color: #E0EEFA;
+}
+
 .case_double_image {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
