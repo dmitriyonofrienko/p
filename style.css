@@ -594,15 +594,6 @@ a:hover .image_wrap video {
     padding-bottom: 25px;
   }
 }
-.fade-up {
-  opacity: 0;
-  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
-}
-
-.fade-up.visible {
-  opacity: 1;
-}
-
 .lang_block {
   display: flex;
   flex-direction: column;
@@ -629,4 +620,36 @@ a:hover .image_wrap video {
 
 .link_active {
   color: #EA3526 !important;
+}
+
+.animated-text .word {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInUp 0.35s ease-in-out forwards;
+  transform: translateY(4px);
+  color: #EA3526;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    scale: 1;
+    color: #000000;
+  }
+}
+.head_one {
+  max-width: 800px;
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fade-up 1.2s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fade-up {
+  to {
+    opacity: 1;
+  }
 }
