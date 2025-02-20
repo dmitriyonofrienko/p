@@ -17,7 +17,7 @@ words.forEach((word, index) => {
 
 
 // Проверяем, был ли уже выполнен скрипт анимации в этой сессии
-let initialDelay = 1.4; // Начальная задержка перед анимацией, например, 1 секунда
+let initialDelay = 1.6; // Начальная задержка перед анимацией, например, 1 секунда
 
 if (sessionStorage.getItem('animationPlayed')) {
   initialDelay = 0; // Если анимация уже воспроизводилась, ставим задержку равной 0
@@ -41,15 +41,13 @@ if (!sessionStorage.getItem('animationPlayed')) {
 //================================================
 
 
-// // Создаем наблюдателя для элементов с классом .fade-up
-// const observer = new IntersectionObserver(entries => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       // Добавляем класс "visible" для видимых элементов
-//       entry.target.classList.add("visible");
-//     }
-//   });
-// }, { threshold: 0.15 }); // Срабатывает, когда хотя бы 15% элемента видны
+// Разбиваем текст на буквы
+const textChars = new SplitType('.animated-chars', { types: 'chars' });
 
-// // Выбираем все элементы с классом .fade-up и начинаем их наблюдать
-// document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+// Выбираем все буквы
+const letters = document.querySelectorAll('.animated-chars .char');
+
+// Применяем задержку к каждой букве
+letters.forEach((letter, index) => {
+  letter.style.animationDelay = `${index * 0.03}s`; // Увеличиваем задержку для каждой буквы
+});
