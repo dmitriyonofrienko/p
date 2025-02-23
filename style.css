@@ -238,8 +238,9 @@ h2 {
 
 @media (max-width: 800px) {
   h2 {
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 24px;
+    line-height: 24px;
+    margin: 10px 0 15px;
   }
 }
 .case_head {
@@ -591,7 +592,6 @@ a:hover .image_wrap video {
 
 .data {
   width: 100%;
-  max-width: 600px;
   display: grid;
   margin-top: 40px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
