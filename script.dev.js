@@ -68,4 +68,88 @@ window.addEventListener('scroll', function () {
       }
     }
   });
+}); /////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+// //- custom cursor script
+// const cursor = document.getElementById('custom-cursor');
+// const cursorText = cursor.querySelector('.cursor-text');
+// const targets = document.querySelectorAll('.hover-target');
+// const cursorWidth = cursor.offsetWidth;
+// const cursorHeight = cursor.offsetHeight;
+// // Скрываем курсор при загрузке
+// window.addEventListener('load', () => {
+//   cursor.style.display = 'none';
+// });
+// // Перемещение курсора
+// document.addEventListener('mousemove', (e) => {
+//   const x = e.clientX;
+//   const y = e.clientY;
+//   const winWidth = window.innerWidth;
+//   const winHeight = window.innerHeight;
+//   let left = Math.min(Math.max(x, cursorWidth / 2), winWidth - cursorWidth / 2);
+//   let top = Math.min(Math.max(y, cursorHeight / 2), winHeight - cursorHeight / 2);
+//   cursor.style.left = `${left}px`;
+//   cursor.style.top = `${top}px`;
+// });
+// // Уникальный текст для каждого элемента
+// targets.forEach(target => {
+//   target.addEventListener('mouseenter', () => {
+//     const text = target.getAttribute('data-cursor-text') || 'Click';
+//     cursorText.textContent = text; // Обновляем текст
+//     cursor.style.display = 'block';
+//   });
+//   target.addEventListener('mouseleave', () => {
+//     cursor.style.display = 'none';
+//   });
+// });
+//- custom cursor script
+
+var cursor = document.getElementById('custom-cursor');
+var cursorText = cursor.querySelector('.cursor-text');
+var targets = document.querySelectorAll('.hover-target');
+var cursorWidth = cursor.offsetWidth;
+var cursorHeight = cursor.offsetHeight; // Функция проверки ширины экрана
+
+var isDesktop = function isDesktop() {
+  return window.innerWidth >= 800;
+}; // Скрываем курсор при загрузке
+
+
+window.addEventListener('load', function () {
+  cursor.style.display = 'none';
+}); // Перемещение курсора только на экранах >= 800px
+
+document.addEventListener('mousemove', function (e) {
+  if (!isDesktop()) return; // Прерываем, если ширина < 800px
+
+  var x = e.clientX;
+  var y = e.clientY;
+  var winWidth = window.innerWidth;
+  var winHeight = window.innerHeight;
+  var left = Math.min(Math.max(x, cursorWidth / 2), winWidth - cursorWidth / 2);
+  var top = Math.min(Math.max(y, cursorHeight / 2), winHeight - cursorHeight / 2);
+  cursor.style.left = "".concat(left, "px");
+  cursor.style.top = "".concat(top, "px");
+}); // Уникальный текст для каждого элемента только на экранах >= 800px
+
+targets.forEach(function (target) {
+  target.addEventListener('mouseenter', function () {
+    if (!isDesktop()) return; // Прерываем, если ширина < 800px
+
+    var text = target.getAttribute('data-cursor-text') || 'Click';
+    cursorText.textContent = text; // Обновляем текст
+
+    cursor.style.display = 'block';
+  });
+  target.addEventListener('mouseleave', function () {
+    if (!isDesktop()) return; // Прерываем, если ширина < 800px
+
+    cursor.style.display = 'none';
+  });
+}); // Дополнительно скрываем курсор при изменении размера окна
+
+window.addEventListener('resize', function () {
+  if (!isDesktop()) {
+    cursor.style.display = 'none';
+  }
 });

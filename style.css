@@ -769,11 +769,12 @@ a:hover .image_wrap video {
     grid-template-columns: repeat(12, 1fr);
   }
 }
-.hover-target {
-  cursor: none !important;
-  /* Скрываем стандартный курсор */
+@media (min-width: 809px) {
+  .hover-target {
+    cursor: none !important;
+    /* Скрываем стандартный курсор */
+  }
 }
-
 #custom-cursor {
   position: fixed;
   /* Фиксируем относительно окна */
@@ -795,6 +796,11 @@ a:hover .image_wrap video {
   /* Центрируем по курсору */
   border-radius: 160px;
   border: 1px solid #000000;
+}
+@media (max-width: 800px) {
+  #custom-cursor {
+    display: none;
+  }
 }
 
 #custom-cursor .content {
