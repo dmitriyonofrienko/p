@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .lightgray {
   background-color: #D1D5E1;
 }
@@ -122,16 +123,16 @@
 }
 
 .case_text {
-  margin: 100px auto 100px auto;
-  max-width: 800px;
+  margin: 80px auto 80px auto;
+  max-width: 760px;
 }
 .case_text p {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 @media (max-width: 800px) {
   .case_text {
-    margin: 60px 15px 60px 15px;
+    margin: 40px 15px 40px 15px;
   }
 }
 .mobile {
@@ -166,4 +167,97 @@
 }
 .last {
   margin-bottom: 40px;
+}
+
+.simple img, .simple video {
+  max-width: 795px;
+}
+
+.parallax-container {
+  position: absolute;
+  width: 414px;
+  /* Ширина экрана телефона */
+  height: 704px;
+  /* Высота экрана телефона */
+  top: 122px;
+  /* Отступ сверху до экрана */
+  left: 25px;
+  /* Отступ слева для выравнивания по центру экрана */
+  overflow: hidden;
+  z-index: 2;
+  /* Поверх телефона */
+}
+@media (max-width: 800px) {
+  .parallax-container {
+    top: 0;
+    /* Убираем отступ сверху */
+    left: 0;
+    /* Убираем отступ слева */
+    margin: 0 auto;
+    /* Центрируем */
+    position: relative;
+    /* Меняем на relative, если не нужен absolute */
+    width: 300px;
+    /* Ширина экрана телефона */
+    height: 667px;
+    /* Высота экрана телефона */
+    border: 14px solid #000000;
+    border-radius: 44px;
+  }
+}
+
+.parallax-image {
+  position: absolute;
+  top: 0;
+  /* Выравниваем по верхнему краю */
+  left: 0;
+  /* Выравниваем по левому краю */
+  width: 100%;
+  /* Растягиваем по ширине контейнера */
+  height: auto;
+  /* Сохраняем пропорции изображения */
+  min-height: 100%;
+  /* Убеждаемся, что оно не меньше контейнера */
+  object-fit: cover;
+  /* Обрезаем лишнее, сохраняя пропорции */
+  z-index: 1;
+}
+.parallax-image[data-direction=down] {
+  top: auto;
+  bottom: 0;
+}
+
+.phone-wrapper {
+  position: relative;
+  width: 465px;
+  /* Полная ширина изображения телефона */
+  height: 940px;
+  /* Полная высота телефона */
+  margin: 50px auto;
+  /* Центрируем на странице */
+}
+@media (max-width: 800px) {
+  .phone-wrapper {
+    width: 100%;
+    /* Адаптивная ширина */
+    height: auto;
+    /* Адаптивная высота */
+  }
+}
+
+.phone-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Растягиваем до ширины обертки */
+  height: auto;
+  /* Сохраняем пропорции */
+  z-index: 1;
+}
+@media (max-width: 800px) {
+  .phone-image {
+    display: none;
+    /* Скрываем изображение телефона */
+  }
 }

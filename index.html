@@ -48,7 +48,7 @@
       </div>
       <div class="grad_line fade-up"></div>
       <div class="grid container">
-        <div class="grid_row"><a class="col-5 fade-up" href="case_c4b.html">
+        <div class="grid_row"><a class="col-5 item-card fade-up hover-target" href="case_c4b.html" data-cursor-text="150K+ відвідувачів за місяць">
             <div class="image_wrap"><img src="assets/thumbnail_cars4bid.jpg" alt="" loading="lazy"></div>
             <p class="case_name">Cars4Bid</p>
             <div class="case_description"> 
@@ -56,7 +56,7 @@
             </div>
             <div class="case_description"> 
               <p>2022-2025</p>
-            </div></a><a class="col-5 fade-up" href="case_united.html">
+            </div></a><a class="col-5 item-card fade-up hover-target" href="case_united.html" data-cursor-text="↑20.37% Зростання конверсій">
             <div class="image_wrap">
               <video src="assets/thumbnail_united.mp4" autoplay loop="true" muted playsinline></video>
             </div>
@@ -66,8 +66,14 @@
             </div>
             <div class="case_description"> 
               <p>2021-2022</p>
-            </div></a></div>
-        <div class="grid_row"><a class="col-3 fade-up" href="case_forwomaninscience.html">
+            </div></a>
+          <div id="custom-cursor"> 
+            <div class="content">
+              <p class="cursor-text"> </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid_row"><a class="col-3 item-card fade-up" href="case_forwomaninscience.html">
             <div class="image_wrap">
               <video src="assets/thumbnail_forwomaninscience.mp4" autoplay loop="true" muted playsinline></video>
             </div>
@@ -77,7 +83,7 @@
             </div>
             <div class="case_description"> 
               <p>2023</p>
-            </div></a><a class="col-3 fade-up" href="case_cowboy.html">
+            </div></a><a class="col-3 item-card fade-up hover-target" href="case_cowboy.html" data-cursor-text="Від 0 до 16K+ відвідувачів за місяць">
             <div class="image_wrap">
               <video src="assets/thumbnail_cowboy.mp4" autoplay loop="true" muted playsinline></video>
             </div>
@@ -87,7 +93,7 @@
             </div>
             <div class="case_description"> 
               <p>2020</p>
-            </div></a><a class="col-4 fade-up" href="case_ppm.html">
+            </div></a><a class="col-4 item-card fade-up" href="case_ppm.html">
             <div class="image_wrap"><img src="assets/thumbnail_ppm.jpg" alt="" loading="lazy"></div>
             <p class="case_name">Power Project Management</p>
             <div class="case_description"> 
@@ -96,7 +102,7 @@
             <div class="case_description"> 
               <p>2021</p>
             </div></a></div>
-        <div class="grid_row"><a class="col-5 fade-up" href="case_shemax.html">
+        <div class="grid_row"><a class="col-5 item-card fade-up" href="case_shemax.html">
             <div class="image_wrap"><img src="assets/thumbnail_shemax.jpg" alt="" loading="lazy"></div>
             <p class="case_name">Shemax</p>
             <div class="case_description"> 
@@ -104,7 +110,7 @@
             </div>
             <div class="case_description"> 
               <p>2021</p>
-            </div></a><a class="col-5 fade-up" href="case_testelium.html">
+            </div></a><a class="col-5 item-card fade-up hover-target" href="case_testelium.html" data-cursor-text="+25.9% Сторінок за відвідування">
             <div class="image_wrap"><img src="assets/thumbnail_testelium.jpg" alt="" loading="lazy"></div>
             <p class="case_name">Testelium</p>
             <div class="case_description"> 
@@ -113,7 +119,7 @@
             <div class="case_description"> 
               <p>2020</p>
             </div></a></div>
-        <div class="grid_row"> <a class="col-4 fade-up" href="case_aquaboon.html">
+        <div class="grid_row"> <a class="col-4 item-card fade-up" href="case_aquaboon.html">
             <div class="image_wrap"><img src="assets/thumbnail_aquaboon.jpg" alt="" loading="lazy"></div>
             <p class="case_name">Aquaboon</p>
             <div class="case_description"> 
@@ -121,7 +127,7 @@
             </div>
             <div class="case_description"> 
               <p>2024</p>
-            </div></a><a class="col-3 fade-up" href="case_dzyga.html">
+            </div></a><a class="col-3 item-card fade-up" href="case_dzyga.html">
             <div class="image_wrap"><img src="assets/thumbnail_dzyga.jpg" alt="" loading="lazy"></div>
             <p class="case_name">Dzyga Hub</p>
             <div class="case_description"> 
@@ -129,7 +135,7 @@
             </div>
             <div class="case_description"> 
               <p>2025</p>
-            </div></a><a class="col-3 fade-up" href="case_medlas.html">
+            </div></a><a class="col-3 item-card fade-up" href="case_medlas.html">
             <div class="image_wrap">
               <video src="assets/thumbnail_medlas.mp4" autoplay loop="true" muted playsinline></video>
             </div>
@@ -143,12 +149,51 @@
       </div>
       <div class="grad_line"></div>
       <div class="footer container">
-        <p>1994-2025 | Dmytro Onofriienko</p>
+        <p>Dmytro Onofriienko | Design and code by me</p>
         <div class="hero_info"> 
           <div class="hero_links gray-text"><a href="https://t.me/dmitriyonofrienko" target="_blank">Телеграм</a><a href="mailto:dmitriyonofrienko@gmail.com" target="_blank">Пошта</a><a href="https://www.linkedin.com/in/dmitriyonofrienko/" target="_blank">LinkedIn</a><a href="assets/Дмитро Онофрієнко – Designer CV.pdf" target="_blank">CV</a></div>
         </div>
       </div>
     </body>
+    <script>
+      const cursor = document.getElementById('custom-cursor');
+      const cursorText = cursor.querySelector('.cursor-text');
+      const targets = document.querySelectorAll('.hover-target');
+      const cursorWidth = cursor.offsetWidth;
+      const cursorHeight = cursor.offsetHeight;
+      
+      // Скрываем курсор при загрузке
+      window.addEventListener('load', () => {
+        cursor.style.display = 'none';
+      });
+      
+      // Перемещение курсора
+      document.addEventListener('mousemove', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        const winWidth = window.innerWidth;
+        const winHeight = window.innerHeight;
+      
+        let left = Math.min(Math.max(x, cursorWidth / 2), winWidth - cursorWidth / 2);
+        let top = Math.min(Math.max(y, cursorHeight / 2), winHeight - cursorHeight / 2);
+      
+        cursor.style.left = `${left}px`;
+        cursor.style.top = `${top}px`;
+      });
+      
+      // Уникальный текст для каждого элемента
+      targets.forEach(target => {
+        target.addEventListener('mouseenter', () => {
+          const text = target.getAttribute('data-cursor-text') || 'Click';
+          cursorText.textContent = text; // Обновляем текст
+          cursor.style.display = 'block';
+        });
+        target.addEventListener('mouseleave', () => {
+          cursor.style.display = 'none';
+        });
+      });
+      
+    </script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="script.dev.js"></script>
   </head>

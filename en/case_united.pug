@@ -6,25 +6,28 @@ include __head
         
         .case_head.hero
             .hero_head
-                .head.animated-chars
-                    h1 United Porte
-                .tag
-                    p Online furniture store in the USA
+                .head.animated-text
+                    h1 Design of the United Port Furniture Online Store
             .paragraph
-                p United Porte is a manufacturer and supplier of doors, windows, and furniture in the USA. The main task was to update the website design with a focus on enhancing product customization. Now, users can not only change the size and color of selected items but also adjust additional parameters such as glass type, locks, hinges, and more.
-                p In addition to introducing new functionality, the redesign involved optimizing all pages of the online store to improve the user experience and increase conversion rates.
+                p United Port is a door sales company in the USA, based in New York. All sales are conducted through an existing website. As the company planned to expand its product range and introduce new services in the near future, it was necessary to add this functionality to certain pages and improve the site’s navigation.
+                p An additional task was to optimize the existing features and fix bugs and inaccuracies on the website.
             .empty
             .data
                 .data_item
-                    .data_number 
+                    .data_number.animated-chars  
                         p ↑12.4%
                     .data_description 
-                        p Number of pages per session
+                        p Pages per session
                 .data_item
-                    .data_number 
+                    .data_number.animated-chars  
                         p ↑20.37%
                     .data_description 
-                        p Increase in conversions
+                        p Conversion rate increase
+                .data_item
+                    .data_number.animated-chars  
+                        p ↓10.10%
+                    .data_description 
+                        p Bounce rate
 
         .disclose
             .disclose_addition
@@ -39,58 +42,98 @@ include __head
                 .did_list 
                     p Briefing
                     p User Research
-                    p Wireframing
                     p Prototyping
                     p UX/UI Design
-                    p Testing
-
-        .case.centered.united_color
-            img(src="../assets/case_united/1.jpg", alt="")
-
-        .case 
-            img(src="../assets/case_united/15.jpg", alt="")
-            
-        .case_text 
-            p On the category page, promotional banners are occasionally integrated into the product list to subtly inform customers about discounts and special offers. This approach helps draw attention to promotions without being overly intrusive.
-
-        .case.centered.united_color
-            img(src="../assets/case_united/2.jpg", alt="")
-
-        .case_text 
-            p Previously, customers had to choose doors from a general category, but if a specific detail, such as the lock mechanism or hinges, didn’t fit, they had to search for another model in the overall list. This significantly complicated the user flow and made the selection process less convenient.
-            p Therefore, a new feature has been added to the product page, allowing customers to customize doors by changing the hinges, glass type, lock type and design, as well as the color and material of the door. Now, buyers can easily adjust the doors to match their interior design and personal.
-
-        .case.centered.united_color
-            img(src="../assets/case_united/3.jpg", alt="")
-
-        .case
-            img(src="../assets/case_united/9.jpg", alt="")
-        
-        .case_text 
-            p A unique icon has been developed for each product category and subcategory to help future customers quickly understand the functionality of the doors. With visual cues, selecting the right mechanism becomes intuitive, significantly simplifying the process of searching and comparing models.
-        
-        .case
-            img(src="../assets/case_united/5.jpg", alt="")
-
-        .case.tablet.united_color
-            video(src="../assets/case_united/1.mp4" autoplay loop="true" muted playsinline)
-
-        .case_double_image
-            img(src="../assets/case_united/13.jpg", alt="")
-            video(src="../assets/case_united/2.mp4" autoplay loop="true" muted playsinline)
+                    p QA
 
         .case_text
-            p The shopping cart also highlights the option to purchase additional services, such as door assembly or installation. This not only simplifies the purchasing process for the customer but also increases the revenue from offering these services.    
+            h2 Audit
+            p At the first stage, I conducted an audit of the current website, analyzing it from a UX/UI perspective and identifying existing issues. The goal was to uncover obvious flaws that could reduce conversions and propose solutions to address them.
+            p The audit resulted in documenting approximately 120 bugs and shortcomings. Each was evaluated based on the ratio of effort required to fix it versus the potential benefit. Priority issues were handed over to the development team for further action.
+        
+        .case_text
+            h2 User Research
+            p Before addressing the issues identified in the audit, I analyzed around 150 user behavior recordings via Hotjar, focusing on those who abandoned the site, to understand the possibly non-obvious difficulties they encountered.
+            p Additionally, I reviewed about 50 contacts—users who completed the entire journey from first contact to purchase—to identify new opportunities for improving UX.
+        
+        .case_text
+            h2 Feedback Analysis
+            p I was primarily interested in feedback from users dissatisfied with their experience interacting with United Port. In comments mentioning the website, complaints mainly revolved around the shopping cart and the site’s performance speed.
+
+        .case.simple 
+            img(src="../assets/case_united/testimonials.jpg", alt="")
+
+        .case_text
+            h2 Prototyping and Design
+            p The redesign focused on resolving the issues uncovered during research and adjusting the site’s structure to accommodate new product categories.
+            p To speed up the process of populating mockups with real data, I used a small JS script that logged all real values—product names, prices, and image links—into the console. I saved this data from the console in JSON format, allowing me to automatically load real content into Figma mockups with a single click. This significantly accelerated the prototyping process.
+        
+        .case
+            img(src="../assets/case_united/console.jpg", alt="")
+
+        .case_text 
+            h2 Homepage
+            p This page retains the previous structure but now includes new categories, as the company is expanding its range to sell tables, mirrors, and bathroom and kitchen fixtures.
+        
+        .case.centered.united_color 
+            img(src="../assets/case_united/general.jpg", alt="")
+
+        .case 
+            img(src="../assets/case_united/decor-1.jpg", alt="")
+
+        .case_text 
+            h2 Product Category Page
+            p On the category page, promotional banners are periodically integrated into the general product list to subtly inform customers about special offers. This approach draws attention to promotions without being overly intrusive.
 
         .case.centered.united_color
-            img(src="../assets/case_united/4.jpg", alt="")
+            img(src="../assets/case_united/category.jpg", alt="")
 
-        .case_double_image
-            .double.centered.united_color
-                img(src="../assets/case_united/7.jpg", alt="")
+        .case_text
+            h2 Product Page 
+            p Previously, customers had to choose doors from a general category, but if a detail—such as the lock mechanism or hinges—didn’t suit their needs, they had to search for another model in the full list. This significantly complicated the user flow and made the selection process less convenient
+            p Thus, new functionality was added to the product page, allowing customers to customize doors by changing hinges, glass type, lock type and design, door color, and material. Now, buyers can easily tailor doors to their personal preferences.
+            p Additionally, users can now conveniently order door assembly and installation services.
+
+        .phone-wrapper
+            img.phone-image(src="../assets/case_united/iphone-moc-2x.png" alt="")
+            .parallax-container(data-direction="up")
+                img.parallax-image(src="../assets/case_united/phone-3.jpg" alt="")       
+
+        .case.centered.united_color
+            img(src="../assets/case_united/item.jpg", alt="")
 
         .case
-            img(src="../assets/case_united/8.jpg", alt="")
+            img(src="../assets/case_united/mobile-item.jpg", alt="")
+        
+        .case_text 
+            h2 Illustrations
+            p With new product categories being added to the site, I designed icons in a new stylistic approach for the website. Previously, there were just images that were hard to discern at small sizes.
+            p I also created a separate icon for each door category and subcategory, using visual cues to help customers quickly understand how the doors function.
+        
+        .case
+            img(src="../assets/case_united/icons.jpg", alt="")
+
+        .case.tablet.united_color
+            video(src="../assets/case_united/navigation.mp4" autoplay loop="true" muted playsinline)
+
+        .case_double_image
+            img(src="../assets/case_united/mobile-menu.jpg", alt="")
+            video(src="../assets/case_united/icon-slider.mp4" autoplay loop="true" muted playsinline)
+
+        .case_text
+            h2 Checkout Process
+            p The customer’s cart now includes options to purchase additional services, such as door assembly or installation. This not only simplifies the buying process for clients but also increases revenue from offering these services.
+
+        .phone-wrapper
+            img.phone-image(src="../assets/case_united/iphone-moc-2x.png" alt="")
+            .parallax-container(data-direction="up")
+                img.parallax-image(src="../assets/case_united/phone-2.jpg" alt="")        
+        
+        .case.centered.united_color
+            img(src="../assets/case_united/cart.jpg", alt="")
+
+        .case
+            img(src="../assets/case_united/mobile-3.jpg", alt="")
 
 
         //-page end
