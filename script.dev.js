@@ -7,12 +7,12 @@ var text = new SplitType('.animated-text', {
 var words = document.querySelectorAll('.animated-text .word'); // Применяем задержку к каждому слову
 
 words.forEach(function (word, index) {
-  word.style.animationDelay = "".concat(index * 0.1, "s"); // Увеличиваем задержку для каждого слова
+  word.style.animationDelay = "".concat(index * 0.06, "s"); // Увеличиваем задержку для каждого слова
 }); //================================================
 //================================================
 // Проверяем, был ли уже выполнен скрипт анимации в этой сессии
 
-var initialDelay = 1.6; // Начальная задержка перед анимацией, например, 1 секунда
+var initialDelay = 1.4; // Начальная задержка перед анимацией, например, 1 секунда
 
 if (sessionStorage.getItem('animationPlayed')) {
   initialDelay = 0; // Если анимация уже воспроизводилась, ставим задержку равной 0
@@ -68,40 +68,8 @@ window.addEventListener('scroll', function () {
       }
     }
   });
-}); /////////////////////////////////////////////////////
-/////////////////////////////////////////////////////
-// //- custom cursor script
-// const cursor = document.getElementById('custom-cursor');
-// const cursorText = cursor.querySelector('.cursor-text');
-// const targets = document.querySelectorAll('.hover-target');
-// const cursorWidth = cursor.offsetWidth;
-// const cursorHeight = cursor.offsetHeight;
-// // Скрываем курсор при загрузке
-// window.addEventListener('load', () => {
-//   cursor.style.display = 'none';
-// });
-// // Перемещение курсора
-// document.addEventListener('mousemove', (e) => {
-//   const x = e.clientX;
-//   const y = e.clientY;
-//   const winWidth = window.innerWidth;
-//   const winHeight = window.innerHeight;
-//   let left = Math.min(Math.max(x, cursorWidth / 2), winWidth - cursorWidth / 2);
-//   let top = Math.min(Math.max(y, cursorHeight / 2), winHeight - cursorHeight / 2);
-//   cursor.style.left = `${left}px`;
-//   cursor.style.top = `${top}px`;
-// });
-// // Уникальный текст для каждого элемента
-// targets.forEach(target => {
-//   target.addEventListener('mouseenter', () => {
-//     const text = target.getAttribute('data-cursor-text') || 'Click';
-//     cursorText.textContent = text; // Обновляем текст
-//     cursor.style.display = 'block';
-//   });
-//   target.addEventListener('mouseleave', () => {
-//     cursor.style.display = 'none';
-//   });
-// });
+}); //=====================================================
+//=====================================================
 //- custom cursor script
 
 var cursor = document.getElementById('custom-cursor');
@@ -152,4 +120,5 @@ window.addEventListener('resize', function () {
   if (!isDesktop()) {
     cursor.style.display = 'none';
   }
-});
+}); //=====================================================
+//=====================================================

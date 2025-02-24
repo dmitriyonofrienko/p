@@ -96,6 +96,21 @@ a:hover .arrow-svg path {
   background-color: #ea362677;
 }
 
+.tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: width 0.2s ease-in-out;
+}
+
+.tab:hover::after {
+  width: 100%;
+}
+
 img, a {
   -webkit-user-drag: none;
   user-select: none;
@@ -114,6 +129,10 @@ body {
 #my-scrollbar {
   height: 100vh !important;
   width: 100vw !important;
+}
+
+.logo_block {
+  display: block;
 }
 
 .logo {
@@ -224,8 +243,8 @@ h1 {
 }
 @media (max-width: 800px) {
   h1 {
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 34px;
+    line-height: 37px;
   }
 }
 h2 {
@@ -292,6 +311,11 @@ h2 {
   display: flex;
   flex-direction: column;
   padding-top: 40px;
+}
+@media (max-width: 800px) {
+  .grid {
+    padding-top: 20px;
+  }
 }
 
 .grid_row {
@@ -389,16 +413,16 @@ a:hover .image_wrap video {
   }
 }
 .hero_main {
+  padding-top: 18vh;
   display: flex;
   height: auto;
-  align-items: center;
-  gap: 15px;
+  justify-content: start;
+  gap: 5px;
 }
 
 @media (max-width: 800px) {
   .hero_main {
     grid-template-columns: 1fr;
-    padding-top: 40px;
     margin-bottom: 30px;
     gap: 5px;
   }
@@ -483,8 +507,8 @@ a:hover .image_wrap video {
   }
 }
 .container.hero_main {
-  height: calc(100vh - 260px);
-  height: calc(100dvh - 260px);
+  height: calc(82vh - 260px);
+  height: calc(82dvh - 260px);
 }
 
 @media (max-width: 800px) {
@@ -641,7 +665,7 @@ a:hover .image_wrap video {
 }
 .logo_flow_inner {
   display: flex;
-  animation: 30s logo-slide linear infinite;
+  animation: 50s logo-slide linear infinite;
   will-change: transform;
 }
 
@@ -722,9 +746,9 @@ a:hover .image_wrap video {
 @keyframes fadeInUp {
   to {
     opacity: 1;
-    transform: translateY(0);
     scale: 1;
     color: #000000;
+    transform: translateY(0px);
   }
 }
 .fade-up {
@@ -742,15 +766,15 @@ a:hover .image_wrap video {
   display: inline-block;
   opacity: 0;
   animation: fadeInUp 0.35s ease-in-out forwards;
-  transform: translateY(8px);
+  transform: translateY(4px);
   color: #EA3526;
 }
 
 @keyframes fadeInUp {
   to {
     opacity: 1;
-    transform: translateY(0);
     color: #000000;
+    transform: translateY(0px);
   }
 }
 .grid_design_block {
