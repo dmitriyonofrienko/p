@@ -808,7 +808,7 @@ a:hover .image_wrap video {
   /* Поверх всех элементов */
   padding: 80px 0;
   width: 160px;
-  background-color: #ffffff;
+  background-color: #000000;
   color: #000000;
   display: none;
   /* Скрыт по умолчанию */
@@ -819,7 +819,6 @@ a:hover .image_wrap video {
   transform: translate(-50%, -50%);
   /* Центрируем по курсору */
   border-radius: 160px;
-  border: 1px solid #000000;
 }
 @media (max-width: 800px) {
   #custom-cursor {
@@ -828,6 +827,25 @@ a:hover .image_wrap video {
 }
 
 #custom-cursor .content {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+#custom-cursor2 {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  display: none;
+  transform: translate(-50%, -50%);
+}
+
+#custom-cursor2 .content {
   position: absolute;
   top: 50%;
   left: 50%;

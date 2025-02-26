@@ -132,6 +132,41 @@ window.addEventListener('scroll', function () {
   });
 
 
+//=====================================================
+//=====================================================
 
-//=====================================================
-//=====================================================
+const cursor2 = document.getElementById('custom-cursor2'); // Новый курсор
+
+document.addEventListener('mousemove', (e) => {
+    if (!isDesktop()) return;
+
+    const x = e.clientX;
+    const y = e.clientY;
+
+    cursor2.style.left = `${x}px`;
+    cursor2.style.top = `${y}px`;
+});
+
+// Для элементов с `data-cursor="cursor2"` показываем второй курсор
+targets.forEach(target => {
+    target.addEventListener('mouseenter', () => {
+        if (!isDesktop()) return;
+
+        const customCursorType = target.getAttribute('data-cursor');
+
+        if (customCursorType === "cursor2") {
+            cursor2.style.display = 'block';
+            cursor.style.display = 'none';
+        } else {
+            cursor.style.display = 'block';
+            cursor2.style.display = 'none';
+        }
+    });
+
+    target.addEventListener('mouseleave', () => {
+        if (!isDesktop()) return;
+
+        cursor.style.display = 'none';
+        cursor2.style.display = 'none';
+    });
+});

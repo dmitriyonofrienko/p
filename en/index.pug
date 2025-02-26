@@ -100,11 +100,25 @@ include __head
                     div.content
                         p.cursor-text
 
+                div#custom-cursor2 
+                    div.content
+                        svg(width="140" height="140" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M21.9853 14.2071L46.182 38.4038L38.4038 46.182L14.2071 21.9853L12.5 20.2782V22.6924V34H1.5V1.5H34V12.5H22.6924H20.2782L21.9853 14.2071Z" fill="black" stroke="white" stroke-width="2")
+                            //- path(d="M22.1924 13H54.5L41.5 0H0V41.5L13 54.5V22.1924L57.9038 67.0962L67.0962 57.9038L22.1924 13Z" fill="url(#paint0_linear_4353_2450)")
+                            //- defs
+                            //-     linearGradient(id="paint0_linear_4353_2450" x1="-6" y1="-4.5" x2="69.9506" y2="70.55" gradientUnits="userSpaceOnUse")
+                            //-         stop(stop-color="#EA3526")
+                            //-         stop(offset="0.19723" stop-color="#2F0707")
+                            //-         stop(offset="0.374419")
+
+
+
+
             //- 2
             .grid_row
 
                 //- For Women in Science
-                a(href="case_forwomaninscience.html").col-3.item-card.fade-up
+                a(href="case_forwomaninscience.html").col-3.item-card.fade-up.hover-target(data-cursor="cursor2")
                     .image_wrap
                         video(src="../assets/thumbnail_forwomaninscience.mp4", autoplay loop="true" muted playsinline )
                     p.case_name For Women in Science
@@ -124,7 +138,7 @@ include __head
                         p 2020
 
                 //-PPM
-                a(href="case_ppm.html").col-4.item-card.fade-up
+                a(href="case_ppm.html").col-4.item-card.fade-up.hover-target(data-cursor="cursor2")
                     .image_wrap
                        img(src="../assets/thumbnail_ppm.jpg", alt="" loading="lazy")
                     p.case_name Power Project Management
@@ -137,7 +151,7 @@ include __head
             //- 3
             .grid_row
                 //-Shemax
-                a(href="case_shemax.html").col-5.item-card.fade-up
+                a(href="case_shemax.html").col-5.item-card.fade-up.hover-target(data-cursor="cursor2")
                     .image_wrap
                         img(src="../assets/thumbnail_shemax.jpg", alt="" loading="lazy")
                     p.case_name Shemax
@@ -160,7 +174,7 @@ include __head
             //- 4
             .grid_row 
                 //-Aquaboon
-                a(href="case_aquaboon.html").col-4.item-card.fade-up
+                a(href="case_aquaboon.html").col-4.item-card.fade-up.hover-target(data-cursor="cursor2")
                     .image_wrap
                         img(src="../assets/thumbnail_aquaboon.jpg", alt="" loading="lazy")
                     p.case_name Aquaboon
@@ -170,7 +184,7 @@ include __head
                         p 2024
                 
                 //-DzygaHub
-                a(href="case_dzyga.html").col-3.item-card.fade-up
+                a(href="case_dzyga.html").col-3.item-card.fade-up.hover-target(data-cursor="cursor2")
                     .image_wrap
                         img(src="../assets/thumbnail_dzyga.jpg", alt="" loading="lazy")
                     p.case_name Dzyga Hub
@@ -180,7 +194,7 @@ include __head
                         p 2025
                 
                 //-Medlas
-                a(href="case_medlas.html").col-3.item-card.fade-up
+                a(href="case_medlas.html").col-3.item-card.fade-up.hover-target(data-cursor="cursor2")
                     .image_wrap
                         video(src="../assets/thumbnail_medlas.mp4", autoplay loop="true" muted playsinline)
                     p.case_name Medlas Medical Center

@@ -122,3 +122,33 @@ window.addEventListener('resize', function () {
   }
 }); //=====================================================
 //=====================================================
+
+var cursor2 = document.getElementById('custom-cursor2'); // Новый курсор
+
+document.addEventListener('mousemove', function (e) {
+  if (!isDesktop()) return;
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor2.style.left = "".concat(x, "px");
+  cursor2.style.top = "".concat(y, "px");
+}); // Для элементов с `data-cursor="cursor2"` показываем второй курсор
+
+targets.forEach(function (target) {
+  target.addEventListener('mouseenter', function () {
+    if (!isDesktop()) return;
+    var customCursorType = target.getAttribute('data-cursor');
+
+    if (customCursorType === "cursor2") {
+      cursor2.style.display = 'block';
+      cursor.style.display = 'none';
+    } else {
+      cursor.style.display = 'block';
+      cursor2.style.display = 'none';
+    }
+  });
+  target.addEventListener('mouseleave', function () {
+    if (!isDesktop()) return;
+    cursor.style.display = 'none';
+    cursor2.style.display = 'none';
+  });
+});
