@@ -27,22 +27,10 @@ elements.forEach(function (element, index) {
 
 if (!sessionStorage.getItem('animationPlayed')) {
   sessionStorage.setItem('animationPlayed', 'true');
-} //================================================
-//================================================
-// Разбиваем текст на буквы
-
-
-var textChars = new SplitType('.animated-chars', {
-  types: 'words, chars'
-});
-document.querySelectorAll('.animated-chars .word').forEach(function (word) {
-  var letters = word.querySelectorAll('.char');
-  letters.forEach(function (letter, index) {
-    letter.style.animationDelay = "".concat(index * 0.03, "s");
-  });
-}); //=====================================================
+} //=====================================================
 //=====================================================
 //Паралакс эффект для телефонов
+
 
 window.addEventListener('scroll', function () {
   var containers = document.querySelectorAll('.parallax-container');
@@ -151,21 +139,4 @@ targets.forEach(function (target) {
     cursor.style.display = 'none';
     cursor2.style.display = 'none';
   });
-}); //=====================================================
-//=====================================================
-
-var lenis = new Lenis({
-  duration: 1.2,
-  // Длительность инерции
-  easing: function easing(t) {
-    return Math.min(1, 1.001 - Math.pow(2, -10 * t));
-  } // Плавность
-
 });
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);

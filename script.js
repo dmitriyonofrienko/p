@@ -8,7 +8,6 @@ words.forEach((word, index) => {
 });
 
 
-
 //================================================
 //================================================
 // Проверяем, был ли уже выполнен скрипт анимации в этой сессии
@@ -30,19 +29,6 @@ elements.forEach((element, index) => {
 if (!sessionStorage.getItem('animationPlayed')) {
   sessionStorage.setItem('animationPlayed', 'true');
 }
-
-
-//================================================
-//================================================
-// Разбиваем текст на буквы
-const textChars = new SplitType('.animated-chars', { types: 'words, chars' });
-document.querySelectorAll('.animated-chars .word').forEach((word) => {
-  const letters = word.querySelectorAll('.char');
-  letters.forEach((letter, index) => {
-    letter.style.animationDelay = `${index * 0.03}s`;
-  });
-});
-
 
 //=====================================================
 //=====================================================
@@ -72,7 +58,6 @@ window.addEventListener('scroll', function () {
     }
   });
 });
-
 
 
 //=====================================================
@@ -169,19 +154,3 @@ targets.forEach(target => {
         cursor2.style.display = 'none';
     });
 });
-
-
-
-//=====================================================
-//=====================================================
-const lenis = new Lenis({
-    duration: 1.2, // Длительность инерции
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Плавность
-});
-
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
