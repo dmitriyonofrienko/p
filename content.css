@@ -173,6 +173,38 @@
   max-width: 795px;
 }
 
+.phone-wrapper {
+  position: relative;
+  width: 465px;
+  /* Полная ширина изображения телефона */
+  height: 940px;
+  /* Полная высота телефона */
+  margin: 50px auto;
+  /* Центрируем на странице */
+}
+@media (max-width: 800px) {
+  .phone-wrapper {
+    width: 300px;
+    /* Адаптивная ширина */
+    height: 606px;
+    /* Адаптивная высота */
+  }
+}
+.phone-wrapper video {
+  width: 100%;
+}
+
+.phone-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Растягиваем до ширины обертки */
+  height: auto;
+  /* Сохраняем пропорции */
+  z-index: 1;
+}
+
 .parallax-container {
   position: absolute;
   width: 414px;
@@ -189,24 +221,15 @@
 }
 @media (max-width: 800px) {
   .parallax-container {
-    top: 0;
+    top: 78px;
     /* Убираем отступ сверху */
-    left: 0;
+    left: 16px;
     /* Убираем отступ слева */
-    margin: 0 auto;
-    /* Центрируем */
     position: relative;
     /* Меняем на relative, если не нужен absolute */
-    width: 300px;
-    /* Ширина экрана телефона */
-    height: 667px;
-    /* Высота экрана телефона */
-    border: 14px solid #000000;
-    border-radius: 44px;
+    width: 267px;
+    height: 453px;
   }
-}
-.parallax-container video {
-  width: 414px;
 }
 
 .parallax-image {
@@ -224,43 +247,4 @@
   object-fit: cover;
   /* Обрезаем лишнее, сохраняя пропорции */
   z-index: 1;
-}
-.parallax-image[data-direction=down] {
-  top: auto;
-  bottom: 0;
-}
-
-.phone-wrapper {
-  position: relative;
-  width: 465px;
-  /* Полная ширина изображения телефона */
-  height: 940px;
-  /* Полная высота телефона */
-  margin: 50px auto;
-  /* Центрируем на странице */
-}
-@media (max-width: 800px) {
-  .phone-wrapper {
-    width: 100%;
-    /* Адаптивная ширина */
-    height: auto;
-    /* Адаптивная высота */
-  }
-}
-
-.phone-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  /* Растягиваем до ширины обертки */
-  height: auto;
-  /* Сохраняем пропорции */
-  z-index: 1;
-}
-@media (max-width: 800px) {
-  .phone-image {
-    display: none;
-    /* Скрываем изображение телефона */
-  }
 }
