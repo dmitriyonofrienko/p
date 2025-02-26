@@ -134,7 +134,6 @@ window.addEventListener('scroll', function () {
 
 //=====================================================
 //=====================================================
-
 const cursor2 = document.getElementById('custom-cursor2'); // Новый курсор
 
 document.addEventListener('mousemove', (e) => {
@@ -170,3 +169,19 @@ targets.forEach(target => {
         cursor2.style.display = 'none';
     });
 });
+
+
+
+//=====================================================
+//=====================================================
+const lenis = new Lenis({
+    duration: 1.2, // Длительность инерции
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Плавность
+});
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
