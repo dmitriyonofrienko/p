@@ -806,8 +806,8 @@ a:hover .image_wrap video {
   /* Курсор не мешает взаимодействию */
   z-index: 9999;
   /* Поверх всех элементов */
-  padding: 80px 0;
-  width: 160px;
+  padding: 80px 10px;
+  width: 140px;
   background-color: #000000;
   color: #000000;
   display: none;

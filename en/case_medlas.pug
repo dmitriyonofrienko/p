@@ -37,9 +37,14 @@ include __head
         .case.centered.skyblue
             video(src="../assets/case_medlas/1.mp4" autoplay loop="true" muted playsinline)
 
-        .case_double_image
-            .double.centered.skyblue.mobile
-                video(src="../assets/case_medlas/6.mp4" autoplay loop="true" muted playsinline)
+        .pt40
+        
+        .phone-wrapper
+            img.phone-image(src="../assets/case_medlas/iphone-moc-2x.png" alt="")
+            .parallax-container(data-direction="up")
+                video(src="../assets/case_medlas/q2.mp4" autoplay loop="true" muted playsinline)  
+        
+        .pt40
         
         .case.centered.skyblue.tablet
             video(src="../assets/case_medlas/2.mp4" autoplay loop="true" muted playsinline)
@@ -50,6 +55,9 @@ include __head
         .case_double_image
             video(src="../assets/case_medlas/3.mp4" autoplay loop="true" muted playsinline)
             video(src="../assets/case_medlas/5.mp4" autoplay loop="true" muted playsinline)
+
+        .case
+            img(src="../assets/case_medlas/7.jpg", alt="")
 
         
         //-page end
