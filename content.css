@@ -174,8 +174,8 @@
 
 .phone-wrapper {
   position: relative;
-  width: 465px;
-  height: 940px;
+  width: 372px;
+  height: 752px;
   margin: 50px auto;
 }
 @media (max-width: 800px) {
@@ -199,10 +199,10 @@
 
 .parallax-container {
   position: absolute;
-  width: 414px;
-  height: 704px;
-  top: 122px;
-  left: 25px;
+  width: 331px;
+  height: 563px;
+  top: 97px;
+  left: 20px;
   overflow: hidden;
   z-index: 2;
 }
